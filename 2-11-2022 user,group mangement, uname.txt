@@ -1,0 +1,156 @@
+Agenda :
+---------------
+1.Basic commands
+2.Printing the kernal versions 
+3.user management
+4.group management
+5.file permissions
+6.linux file system
+==================================================
+
+1.sudo :- superuser do 
+
+syntax :- sudo su (or) sudo su -
+
+2.echo :- it is used to print the data 
+
+syntax :- echo "India is great"
+
+
+Nginx
+echo "nginx is installed"
+,tomcat 
+echo "tomcat is installed"
+
+3.printf :- to print the data 
+
+syntax :- printf "data"
+
+4.cal :- to print the calendar
+
+syntax :- cal , cal <year> , cal <mon> <year>
+
+5.date :- display the current date 
+--------------------------------------------
+
+6.uname :- To know about kernal name along with thw system information like versions, os, machine,
+            kernal release
+
+i) uname :- it will print the kernal name
+
+ii) uname -r :- it will print the kernal release...
+
+iii) uname -v :- To know about the version
+
+iv) uname -m :- To know about the machine 
+
+v) uname -o :- To know about the operating system
+
+vi) uname -a :- It will print the complete details 
+=============================================================
+
+User management:
+-----------------------------
+for example in our home we will be having brothers and sisters 
+but in our home we are having only one system 
+
+big brother he is having some important data but small brothers 
+
+he will create the users :- if he add that username and password 
+
+organizations :- we will be using the systems that time 
+
+that time they will creat the user give it to us
+
+1.graphical tools 
+
+2.command line tools
+
+3.vi /etc/passwd :- this is the file which is having all the information regarding users 
+
+only root user is having all the persmissions to creat the users & delete..
+
+7.useradd :- by using this command we can create the users
+
+syntax :- useradd <user-name>
+
+to verify whether the user is created or not 
+
+nano /etc/passwd 
+
+8.passwd :- we can add the password for the user
+
+syntax :- passwd <user-name>
+
+to forgot the password :- passwd <user-name>
+
+9.openssl :- we can generate the  encrypted  password 
+
+syntax :- openssl passwd <user-name>
+
+userA :- if userA wants to access the userB account that time it will ask the password
+
+userB 
+
+10.chage :- it is used to know the information about the password 
+
+syntax :- chage -l <user-name>
+
+
+root --- user1 
+
+su user1 
+
+su root ---user1
+
+su user2 --provide the user2
+
+11. userdel :- it is used to delete the users.
+
+syntx :- userdel -r <user-name>
+
+linux Groups :-
+---------------------------------
+in our orgainzations we will be having groups like development team, testing team 
+
+whatsapp :- we will be creating the groups 
+
+12.groupadd : it is used to create the groups 
+
+syntax :- groupadd <group-name>
+
+how to check whether the group is created or not 
+
+groupfile :
+
+nano /etc/group
+
+13.usermod :- it is used to edit the group members 
+
+to add the user to groups  
+
+syntax :- usermod -a -G <group-name> <user-name>
+
+14.groupmod :- we can change the groupname 
+
+syntax :- groupmod -n <new-group> <old-group>
+
+15.groupdel :- it is used to delete the groups 
+
+
+syntax :- groupdel <group-name>
+
+16.remove the user from the group :
+
+syntax : gpasswd -d <user-name> <group-name>
+
+17.getent group :- to display the groups 
+
+
+
+
+
+
+
+
+

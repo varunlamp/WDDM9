@@ -1,0 +1,151 @@
+Linux :
+---------------------
+
+Operating system :
+-----------------------------
+
+Input we are giving to the machine it will be in the human readble 
+langauage it cant be understanable by machine for this reason we are 
+having operating system ..
+
+input ---------operating system --------hardware 
+
+human reable lang ----convert that to binary---input in binary format
+
+Operating system def:
+------------------------
+An opearting system is an interface between a computer and computer 
+hardware. An operating system is a software which performs all the 
+basic tasks like file management, memory managment, process managament
+handling the input and output, and controling peripheral devices 
+such as disk drivers and printers ..............
+
+What is linux :
+-----------------------------
+linux is a family of opensource , multitasking, multiuser computer os
+based on the linux kernal
+
+linux is typically packged in linux distribution
+
+linux os (kernal) is written in c Language.
+
+the source code we can modify based our requirement --kernal  
+
+Kernal :
+------------------------- 
+linux kernal is the core part of operating system , it establish comm
+unication between devices and software.........
+
+GUI :- graphical user interface 
+
+Basic commands :
+---------------------
+launch one ec2 instance --linux 
+
+1.touch :- Touch command is used to create the files ..
+
+syntax : touch <file-name>
+
+Now i want check whether the file is created or not
+
+2.ls :- it will display the list of files/directory present
+        inside the current working directory
+
+3.pwd :- it will display the present working directory...
+
+syntax : pwd
+
+4.cd :- change directory 
+
+directory (linux) :- folders(windows)
+
+cd .. 
+
+5.mkdir : it is used to create the directory
+
+syntax : mkdir <dir-name>
+
+6.whoami :- it will display the user name...
+
+syntax :- whoami
+
+create one directory
+change the dir--which ur created
+display the working dir
+create the files 
+list
+whoami
+
+7.Editors :- vi/nano 
+
+notepad
+To modify/edit the files 
+
+syntax :- nano <file-name>
+          vi <file-name>
+
+now i want to display the content of file
+
+8.cat :- 
+syntax :- cat <file-name>
+
+9.cat > file-name :- I dont want the old data /i want delete
+                     and i need to add the new data
+
+syntax :- cat > file-name
+
+10. cat >> file-name :- by using this we can add new data along with
+                        old data (append the data)
+
+syntax :  cat >> file-name
+
+11.cp : we can copy the files/data  
+
+syntax :- cp from destination 
+
+copy the directory from one dir to other 
+
+cp -r india army 
+
+*) copying the india directory recrsively from india to army 
+
+12. mv :- it is used to move the data from one file to onther
+
+syntax : mv from destination
+
+step 1 :- creat one file 
+
+touch bsf navy
+
+step 2 :- add some data
+
+nano bsf
+
+cat bsf
+
+step 3 : mv bsf navy 
+
+step 4 :- cat navy
+
+*) i want rename the file :- mv <old-file> <new-file>
+
+13.delete the files/directory :
+
+syntax : rm <file-name>
+         
+         rmdir <dir-name>--empty directory
+
+rm -rf :- remove recurisvely forcefully 
+
+*). to delete the all the files :- rm *
+
+Assigenment :
+-----------------
+1.what is operating system
+2.types of operarting systems
+3.explain about linux (history,what is linux)
+4.diff between linux and windows
+5.make a list of the commands what we are executed today.
+
+
+ 
