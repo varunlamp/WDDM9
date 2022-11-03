@@ -1,0 +1,30 @@
+Assigenment 1 :
+-----------------
+1.what is operating system
+
+Answer:- Operating system acts as mediator between computer software and hardware which perforce tasks like file management and storage management.
+
+2.types of operarting systems ?
+
+Answer :-	Types of OS are as follows :-
+
+		IBM, Apple , Linux , unix , ubuntu, fedora , windows , redhat.
+
+3.explain about linux (history,what is linux) ?
+Answer:-
+		Linux was introduced in 1991 by linus torvaldas as personal project .
+
+		linux is OS.
+
+4.diff between linux and windows ?
+
+Answer:-
+				Linux						Windows
+Security	It is more secure than Windows OS.		 It provides much less security to its users than Linux.
+Efficiency		more effeicient then windows			less effiecient 
+Cost			Linux is free of cost.				costly	
+File-name		It’s file name case-sensitive.		file name is case in-sensitive
+	
+5.make a list of the commands what we are executed today.
+
+ls, cat , cp, touch,nano,vi, mkdir,chmod,pwd , cd, whoami,rm.
