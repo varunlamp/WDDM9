@@ -1,0 +1,341 @@
+Agenda :
+-------------------
+1.File management
+2.File permissions
+3.Networking commnads
+4.filter commands 
+5.file compression 
+6.disk utility
+
+Tommarow will start with shell scripting-- cron tab  
+
+
+1.File Management:-
+-----------------------------------
+in our windows we will having c folder in c we will ne having
+program file, program data ..etc...
+
+1./bin :- this is the directory which contains binary files
+           executable files.....
+linux commands : cp,mv,touch,
+
+2./etc :-linux systems configuartions files will be avaiable
+
+3./home :- when ever we create the user at that time liunx syste
+           will create one directory with the name of user in this
+           directory
+
+4./tmp :- Temporary files if the system get restarts all the data will be 
+          cleared 
+
+5./opt :- It is completely dedicated to install the 3rd party applications..
+
+6./usr :- usr is noting but user, in this location user programs and files  
+
+7./var :- it is the sub directory of root ....
+
+File permissions :
+---------------------------
+By using this concept we can control our files 
+
+file :- read, writing(modify), Execute 
+
+owner permissions :
+
+Group Permissions :
+
+other(world) permissions :-
+
+
+File access modes :
+------------------
+1.Read
+2.Write 
+3.Execute
+
+programs :- only group user can able to read the file but dont allow them to write and execute
+
+chmod 7     7      7 <file-name>
+     owner group  others 
+
+7 :- 4(read) + 2(write) + 1 (execute) 
+
+only read permissions to owner ---
+
+chmod 477 <file-name>
+
+Alphabets :
+---------------
+chmod u=rwx,g+w,o+r file
+
+= :-sets the desugnated permissions 
+
++ :- Add the designated permission to file or directory 
+
+- :- Remove the designated permissions to file or directory 
+
+create one file
+
+check the permissions of the file 
+
+give the permissions owner can able to only read&write 
+                     group can able to only write & exeute
+                     others can able to only read & execute
+
+
+chmod 535 file
+
+how to check the permissions????
+ls -l 
+
+
+Networking Commands :-
+================================
+vpc : we need to check whether our system is having the internet access 
+
+1.ping :-(packet internet groper)
+
+2.ifconfig :-
+
+3.Route :-
+
+4.netstat
+
+5.ss(socket statistics)
+
+6.host facebook.com
+
+7.nslookup
+
+8.dig(domain informations groper)  
+
+9.last :
+
+
+
+input output directions:-
+----------------------------------
+1.standard input :
+--------------------
+we will be getting input from the file 
+
+cat < file 
+
+2.Standard output :
+-------------------------------
+we are directed the output of the command 
+
+echo "hello world" > file-name
+
+3.Error redirection :
+------------------------
+By using this we will be redirecting error to the file
+
+example : zcho hello world 2> file
+
+how to get the information about the commands :
+-----------------------------------------------------
+
+man <command>
+
+Disk utility :
+------------------
+By using this commands we will get the information about our disk 
+
+avaialble space ,used space, total space 
+
+1.fdisk -l :(for fixed disk)
+
+2.df 
+df -hT
+
+3.parted -l 
+
+utility(package managers )
+
+linux :- yum 
+
+ubuntu :- apt 
+
+installing :- yum install <application>
+
+url :- 
+wget :- by using wget command we can install the applcation 
+
+
+Filter commands :
+------------------------------
+for example we will be having one college 
+
+civil, mechanical, cs , is ,it, biotech
+
+a,b       a,b      a,b  a,b a,b  a,b
+
+basava, rajesh , ajay, bharath, kanthraj , praveen
+
+                        
+Ajay --cs 
+
+by using filter command i will get the information 
+
+VTU --500 clgs (college, branch, section , name )
+
+1.Head :- it is used to print the starting lines (by default it will print 10 lines)
+
+-n :- To restrict the number of lines .....
+
+-c :- To restrict the character 
+
+-v :- to get the complete information
+
+when we are displaying the data from 2, 3 files 
+
+==file1==
+1
+2
+==file2==
+3
+4
+
+
+2.Tail :-by default it will print the 10lines 
+
+-n :- numbers
+
+-c :- characters
+
+-v : complete information
+
+3.pipleline operator:(|)
+
+by using this we can add 2 to 3 commands 
+
+what ever the output of 1st command it will be passed as an input to 2nd command
+
+
+example :- cat <file-name> | head
+
+
+4.sort :- sort the order of the file 
+
+ASSCI values 
+
+ascending order
+
+synatx :- sort <file>
+
+sort -r <file>
+
+4.uniq :- to detect the dupicat data & we can delete the data 
+
+syntax :
+
+uniq <file-name>
+
+uniq -c <file-name>
+
+uniq -d <file-name>
+
+5.grep :- group regular expression  
+
+syntax  :- grep <word> <file>
+
+example :- ls | grep <file>
+
+
+6.sed (stream editor) :
+
+sed 's/old-data/new-data/g' file-name
+
+7.awk command :-
+---------------------
+
+syntax :- awk '/option/ {print}' <file-name>
+
+
+File compressions :
+-----------------------------
+1.Tar(tape archive)
+2.Zip
+3.gzip
+
+facebook :
+
+signup
+login
+search
+friend req
+msg
+upload
+story 
+
+1.Tar(tape archive)
+-------------------------------
+file1 file2 file3 ----files.tar 
+
+syntax :- tar cvf file.tar <files>
+
+example :- tar cvf files.tar file1,file2,file3
+
+c:- create 
+v:- verbose
+f:- file
+
+
+Extracting :
+-----------------------
+tar xvf files.tar file1,file2,file3
+
+x:- extract 
+v:- verbose
+f :- file
+
+2.zip :
+--------------------
+
+for creating :
+---------------
+syntax : zip <zip file> files 
+
+example : zip files.zip a b c d e f
+
+For extracting :
+---------------------
+unzip <file.zip>
+
+3.gzip :-(gnu zip)
+------------------
+for indivual 
+
+for creating :
+---------------------
+synatx :- gzip <files>
+
+For Extracting :
+-------------------
+syntax :- gzip -d a b c
+
+
+Assignment :
+---------------------
+syntax with example for each and every commands 
+1.File management
+2.File permissions
+3.Networking commnads
+4.filter commands 
+5.file compression 
+6.disk utility
+
+
+
+
+
+
+
+
+
+
+
+
+
+
