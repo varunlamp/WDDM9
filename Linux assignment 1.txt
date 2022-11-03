@@ -1,0 +1,65 @@
+Assignment 1:
+
+1. What is operating system?
+An Operating system is a interface between a computer user and computer hardware.An operating system is a software which performs all the basic tasks like file management, memory management , process management , handling the input and output and controlling periperal devices like disks, drivers etc.
+
+2.Types of operating system
+1.linux
+2.ubuntu
+3.unix
+4.Mac os
+5.windows
+
+3.Explain about linux (History and what is linux)
+History of linux:
+------------------
+In 1991, Linus Torvalds a student at the university of Helsinki, Finland, thought to have a freely available academic version of Unix started writing its own code. Later this project became the Linux kernel. He wrote this program specially for his own PC as he wanted to use Unix 386 Intel computer but couldn't afford it. He did it on MINIX using GNU C compiler. GNU C compiler is still the main choice to compile Linux code but other compilers are also used like Intel C compiler.
+He started it just for fun but ended up with such a large project. Firstly he wanted to name it as 'Freax' but later it became 'Linux'.
+He published the Linux kernel under his own license and was restricted to use as commercially. Linux uses most of its tools from GNU software and are under GNU copyright. In 1992, he released the kernel under GNU General Public License.
+
+Linux
+----------
+Linux is a family of open-source, multi tasking , multiuser compute os based on linux kernel.
+Linux is typically packaged in linux distribution.
+linux operating system is written in C language.
+The source code we can modify based on our requirement - kernel. 
+
+4. Difference between linux and windows.
+Linux:
+------
+1.open source
+2.free
+3.free software
+4.Live CD distributed
+5.Secure
+6.Low Hardware cost
+7. Customizable
+
+Windows:
+---------
+1.Closed source
+2.cost $150 - 320$
+3.costly software
+4.No CD distributed
+5.Insecure
+6.high Hardware cost
+7.non -customizable.
+
+5.Make a list of the commands what we are executed.
+1.Touch <filename> --to create a file.
+2.ls ---to list the files
+3.Pwd --displays the present working directory.
+4.mkdir <dirname> --to create a directory.
+5.whoami --it will display the username.
+6.vi <filename> -- it is like editor
+7. cat <filename> --to dispaly the content in the filename
+8.cat > <filename> -- to replace the old data with new data
+9.cat >> <filename> -- by using this we can add along with old data.
+10. Cp <filename1> <filename2>  --its used to copy the file content
+11. cp -r <directory> <filename2> -- copying  the directory recursively from directory to file
+12. mv <filename1><filename2> -- it used to move and rename the filename.
+13. rm <filename> --remove the filename
+14. rmdir <dirname> --remove the directory.
+15.rm -rf <filename> -- remove recursively forcefully.
+
+
