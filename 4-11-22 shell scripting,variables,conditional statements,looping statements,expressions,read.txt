@@ -1,0 +1,224 @@
+Agenda :
+---------------
+Shell scripting 
+introduction 
+what is the use of shell scripting 
+discuss some of the basic scripts 
+
+
+shell
+terminal
+kernal 
+
+User giving input in human readble language
+          |
+          |
+shell will process the data convert that data into binary lang
+(binary lanagauage is the only one lang that machine can understanad)
+          |(human readable lang to machine redable lang)
+          |
+kernal (kernal is core part of our linux operating system )it will process the data which 
+given by the shell and pass that data to hardware....
+          |
+          |
+hardware will process the data give back response to the kernal 
+
+creating shell script:
+-------------------------------
+
+nano basic.sh
+
+#!bin/bash
+ls
+pwd
+touch file
+
+Variables :
+---------------------
+variable is a named memory alocation which is used to store the data & it can be changed
+n  number times during exection...........
+
+3 types :
+----------------
+1.user defined varaibles
+2.system defined variables
+3.environment variables 
+
+1.user defined varaibles
+---------------------------------
+user is going store the data in the variable
+
+nano variable.sh
+
+var1=10
+var2=20
+echo the value of variable 1 is $var1         #$ is used to call the variable
+
+2.system defined variables:
+
+already in system the varaibles will be allocated 
+
+echo $PWD
+echo $HOME
+echo $OSTYPE
+
+3.environment variables 
+-------------------------------
+
+By using this we will set the environment 
+
+readonly and unset
+
+a=20
+readonly a
+a=9
+echo $a
+
+unset :
+------------
+b=10
+unset b
+echo the value of b is $b
+
+Expressions :-
+==========================
+
+Arithemetic operators :- +, -, *, /, %, ==, !=.......
+
+logical opertors :
+-----------------------
+-eq :- equality cond
+-ne :- not equal
+-gt :- Greater then
+-ge :- greater then or equal to
+-lt :- less then
+-le :- less the or equal to
+
+Arithemetic opertors:
+---------------------
+
+a=15    #stroing the the value of 15 in a
+b=20     #stroing the the value of 20 in b
+sum=$((a + b))   #sum is varaible name in that i am storing the output of addition
+echo the addition of a and b is $sum
+
+a=25
+b=20
+sum=`expr $a - $b`
+echo the addition of a and b is $sum
+conditional statements :
+----------------------
+
+looping statements :
+----------------------------
+1.for loop :
+---------------------------
+
+for varname in 2 3 4
+do
+echo $varname
+done 
+
+read number
+for varname in 1 2 3 4 5 6 7 8 9 10
+do
+echo $((number * varname))
+done
+
+while loop :
+--------------
+n=1                     #value of n is 1 now 
+while [[ $n -le 10 ]]   #1 less then or equal to 10 true 
+do                      #2less then or equal to 10 true
+echo $n                 #print the value of n (1)
+((n++))                 #(1+1=2)
+done
+
+echo enter the number 
+read number 
+n=1                     
+while [[ $n -le 10 ]]    
+do                      
+echo $((n * number))                 
+((n++))                 
+done
+
+Conditional statemets :
+--------------------------------
+based on the conditions it will execute
+
+1.if
+2.if else
+3.else-if
+
+1.if :- if the condition is true then only it will excute or else it wont excute
+
+example :- mom will send you to market to bring onion we will buy onion or else will come 
+back to empty hand
+
+echo enter the value
+read number
+if [ $number -lt 100 ]
+then 
+echo "$number is less then 100"
+fi
+
+
+if-else :
+----------------
+if the condition is false that time it will print(execute the ) else part 
+
+echo "enter the number"
+read number 
+if [ `expr $number % 2` == 1 ] 
+then 
+echo "the number is odd"
+else
+echo "the number is even"
+fi
+
+for even number :
+---------------------
+echo "enter the number"
+read number 
+if [ `expr $number % 2` == 0 ] 
+then 
+echo "the number is odd"
+else
+echo "the number is even"
+fi
+
+
+2)6(3
+  6
+-----------
+  0
+
+else-if :
+-------------------
+read a
+if [ `expr $a % 2` == 0 ]
+then
+echo "even"
+elif [ `expr $a % 2` == 1 ]
+then 
+echo "odd"
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
