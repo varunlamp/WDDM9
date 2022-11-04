@@ -205,6 +205,12 @@ then
 echo "odd"
 fi
 
+Assignments :
+-----------------
+Try with all the special operator and one example 
+conditional statements
+looping statements
+
 
 
 
