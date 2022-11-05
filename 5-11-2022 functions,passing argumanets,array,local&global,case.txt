@@ -1,0 +1,237 @@
+Agenda:
+--------------
+1.switch (case-esac)
+2.functions
+3.Arrays
+4.file reading 
+
+shell scripting is completed
+
+from monday we will be starting with GIT
+
+1.case-esac statements:
+--------------------------------
+based on the options given by the user it is going execute 
+
+for example we will be having mcq questions 
+
+1 questions for that questions they will be giving 4 options 
+
+read name 
+name=linux
+
+case $name in 
+
+linux)
+echo "it is the linux os"
+;;
+
+ubuntu)
+
+echo "it is ubuntu os"
+;;
+
+*) echo "default option"
+;;
+esac
+
+Calculator:
+--------------------
+echo "enter the operator"      #+,-,*,/
+read oparator
+
+case $oparator in
+
++)
+read a 
+read b
+echo `expr $a + $b`
+;;
+
+-)
+read x
+read y
+echo `expr $x - $y`
+;;
+
+\*)
+read c
+read d
+echo `expr $c \* $d`
+;;
+
+/)
+read a
+read b
+echo `expr $a / $b`
+;;
+
+*)
+echo "default options"
+;;
+esac
+
+Array:
+-----------------
+An array is a collection of items of same data type stored at contigous memeory location 
+
+
+arr=(skillrary qspiders devops india)
+     #  0         1       2       3
+
+echo ${arr[@]:0}
+echo ${arr[@]:1}
+
+
+output:
+------------
+skillrary qspiders devops india
+qspiders devops india
+
+
+Functions :
+-----------------------
+Functions are group of statements it will get execute when ever it is called or invoked 
+
+example :
+qspiders application 
+
+attandence
+course
+branch
+duartion,fees
+
+if we are having 100 features while execting if we get error it will dificult to identify the error 
+for this reason what we will do
+
+by using functions we will create 100 functions 
+
+5 feature 
+
+name=10
+
+read name 
+
+$1 
+Example :
+----------------
+
+sum() 
+{
+x=`expr $1 + $2`
+}
+
+sum 4 5
+
+
+sum()   #creating the function
+{        #to enter into the function
+x=`expr $1 + $2`      #by using expressions we are doing the sum
+echo $x           #printing the the variable x
+}         #to end
+
+sum 4 5   #calling the function as well as passing the arguments
+
+options :
+-----------------
+x=$(($1 + $2))
+x=`expr $1 + $2`
+
+
+install java
+
+install httpd
+
+sceanrio :- Write a script in such a way that you need to write script to install java and httpd but only 
+java needs to install 
+
+linux :- yum
+ubuntu :- apt
+
+linux :- yum install java-11* -y
+
+ubuntu :apt install openjdk-11 -y
+
+
+---------------------------------------------------------------
+java()
+{ 
+yum install java-11* -y
+echo "java installation is done"
+echo ${FUNCNAME}
+}
+
+httpd()
+{
+yum install httpd -y
+echo "httpd is installed"
+
+echo ${FUNCNAME}
+}
+
+#calling the functions 
+java 
+httpd
+
+local & global variables :
+
+president and CM
+---------------------------------
+pkg=nginx
+
+install()
+{
+echo "installing $pkg"
+echo ${FUNCNAME}
+}
+
+config()
+
+{
+pkg=tomcat
+echo "configure the $pkg"
+echo $FUNCNAME
+}
+
+install 
+config
+
+
+
+shell scripting is completed
+
+from monday we will be starting with GIT
+
+Assignments :
+----------------------
+3-3 examples with the explanation 
+1.switch (case-esac)
+2.functions
+3.Arrays
+
+CARS="bmw" 
+#Pass the variable in string 
+case "$CARS" in 
+#case 1 "mercedes") echo "Headquarters - Affalterbach, Germany" 
+;; 
+#case 2 
+"audi")
+ echo "Headquarters - Ingolstadt, Germany" 
+;; 
+#case 3
+ "bmw") 
+echo "Headquarters - Chennai, Tamil Nadu, India" 
+;; 
+esac 
+
+
+
+
+
+
+
+
+
+
+
+
