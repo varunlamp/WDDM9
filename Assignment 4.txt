@@ -1,0 +1,78 @@
+Assignment 4:
+=================
+switch
+array
+functions
+Example with Explanation:
+---------------------
+Switch(case -esac) :
+------
+FRUIT="kiwi" #assigns the value kiwi
+
+case "$FRUIT" in  #options like apple, banana, kiwi used in case statement
+   "apple") echo "Apple pie is quite tasty." 
+   ;;
+   "banana") echo "I like banana nut bread." 
+   ;;
+   "kiwi") echo "New Zealand is famous for kiwi." 
+   ;;
+esac
+
+------------
+Output:
+-----------
+[root@ip-172-31-45-177 shellscripting]# sh fruit.sh
+New Zealand is famous for kiwi.
+[root@ip-172-31-45-177 shellscripting]#
+
+===============================================
+Array:
+---------
+OS=(ubuntu, windows, kali) #list of elements in the array.
+echo "${os[@]}" #prints all the elements in the array
+echo "${os[0]}"  #prints the 0th index value
+echo "${!os[@]}"  #prints the indices of the array
+echo "${#os[@]}"  #prints the length of the array
+unset os[2]     #removes the 2nd index from the array
+os[3]='mac'  #adds the element into the array at 3rd index position.
+echo "${os[@]}" #prints all the elements in the array
+
+output:
+----------
+[root@ip-172-31-45-177 shellscripting]# sh os.sh
+ubuntu, windows, kali
+ubuntu,
+0 1 2
+3
+ubuntu, windows, mac
+[root@ip-172-31-45-177 shellscripting]#
+===========================================================
+Functions:
+-----------
+Hello()           # Define your function here
+{
+	echo Hello world $1 $2
+}
+quit()    # Define your function here
+{
+exit
+}
+Hello Anitha Kanneti  # Invoke your function and passing aruguments
+echo "welcome to world" #printing 
+quit  # Invoke your function
+
+output:
+--------
+[root@ip-172-31-45-177 shellscripting]# sh hello.sh
+Hello world Anitha Kanneti
+welcome to the world
+[root@ip-172-31-45-177 shellscripting]#
+
+================================================
+
+
+
+
+
+
+

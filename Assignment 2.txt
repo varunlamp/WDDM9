@@ -1,0 +1,613 @@
+File Management:
+----------------
+1./bin
+2./etc
+3./home
+4./tmp
+5./opt
+6./usr
+7./var
+
+File Permissions:
+-----------------------
+(i)Giving permissions in symbolic mode.
+
+example:[root@ip-172-31-45-177 ~]# chmod u=rwx,g+w,o+r wddm9
+[root@ip-172-31-45-177 ~]# ls -l wddm9
+-rwxrw-r-- 1 root root 0 Nov  3 14:38 wddm9
+[root@ip-172-31-45-177 ~]# 
+
+(ii)Giving the permissions by using numerics:
+
+example:[root@ip-172-31-45-177 ~]# chmod 744 anitha
+[root@ip-172-31-45-177 ~]# ls -l anitha 
+-rwxr--r-- 1 root root 0 Nov  3 14:42 anitha
+[root@ip-172-31-45-177 ~]# 
+
+Networking Commands:
+---------------------
+
+1. ping : To check connectivity between two nodes.
+
+syntax : ping <domain name>
+example:[root@ip-172-31-45-177 ~]# ping google.com
+PING google.com (142.251.42.14) 56(84) bytes of data.
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=1 ttl=110 time=1.86 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=2 ttl=110 time=1.91 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=3 ttl=110 time=1.89 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=4 ttl=110 time=1.92 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=5 ttl=110 time=1.90 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=6 ttl=110 time=1.96 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=7 ttl=110 time=1.92 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=8 ttl=110 time=2.00 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=9 ttl=110 time=1.88 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=10 ttl=110 time=1.86 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=11 ttl=110 time=1.90 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=12 ttl=110 time=1.91 ms
+64 bytes from bom12s19-in-f14.1e100.net (142.251.42.14): icmp_seq=13 ttl=110 time=1.90 ms
+^C
+--- google.com ping statistics ---
+13 packets transmitted, 13 received, 0% packet loss, time 12014ms
+rtt min/avg/max/mdev = 1.868/1.913/2.005/0.055 ms
+
+2.ifconfig:Display and manipulate route and network interfaces.
+syntax :ifconfig
+
+example:[root@ip-172-31-45-177 ~]# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 172.31.45.177  netmask 255.255.240.0  broadcast 172.31.47.255
+        inet6 fe80::8b:c8ff:fe0f:1650  prefixlen 64  scopeid 0x20<link>
+        ether 02:8b:c8:0f:16:50  txqueuelen 1000  (Ethernet)
+        RX packets 18639  bytes 1632541 (1.5 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19076  bytes 1630674 (1.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+[root@ip-172-31-45-177 ~]# 
+
+3.Route:Shows and manipulate IP routing table.
+
+syntax: route
+example:[root@ip-172-31-45-177 ~]# route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         ip-172-31-32-1. 0.0.0.0         UG    0      0        0 eth0
+instance-data.a 0.0.0.0         255.255.255.255 UH    0      0        0 eth0
+172.31.32.0     0.0.0.0         255.255.240.0   U     0      0        0 eth0
+[root@ip-172-31-45-177 ~]# 
+
+4.Last:The last command  displays information about the last logged -in users
+
+syntax:last
+example:[root@ip-172-31-45-177 ~]# last
+ec2-user pts/0        ec2-13-233-177-3 Thu Nov  3 14:08   still logged in   
+ec2-user pts/0        ec2-13-233-177-4 Thu Nov  3 01:42 - 04:00  (02:17)    
+reboot   system boot  5.10.147-133.644 Thu Nov  3 01:32 - 14:53  (13:20)    
+ec2-user pts/0        ec2-13-233-177-5 Wed Nov  2 14:49 - 15:04  (00:15)    
+reboot   system boot  5.10.144-127.601 Wed Nov  2 14:47 - 14:53 (1+00:06)   
+
+wtmp begins Wed Nov  2 14:47:29 2022
+[root@ip-172-31-45-177 ~]#  
+
+5.netstat:	Display connection information.
+
+synatx:netstat
+example:[root@ip-172-31-45-177 ~]#  netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0    236 ip-172-31-45-177.ap:ssh ec2-13-233-177-3.:59248 ESTABLISHED
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  3      [ ]         DGRAM                    11536    /run/systemd/notify
+unix  2      [ ]         DGRAM                    11537    /run/systemd/cgroups-agent
+unix  5      [ ]         DGRAM                    11544    /run/systemd/journal/socket
+unix  2      [ ]         DGRAM                    16265    /run/chrony/chronyd.sock
+unix  17     [ ]         DGRAM                    11545    /dev/log
+unix  2      [ ]         DGRAM                    13165    /run/systemd/shutdownd
+unix  3      [ ]         STREAM     CONNECTED     19642    /var/lib/amazon/ssm/ipc/health
+unix  3      [ ]         STREAM     CONNECTED     17829    
+unix  3      [ ]         STREAM     CONNECTED     17882    
+unix  3      [ ]         STREAM     CONNECTED     18959    
+unix  3      [ ]         STREAM     CONNECTED     17828    
+unix  2      [ ]         DGRAM                    18678    
+unix  2      [ ]         DGRAM                    76454    
+unix  3      [ ]         STREAM     CONNECTED     17876    
+unix  3      [ ]         STREAM     CONNECTED     17816    
+unix  3      [ ]         STREAM     CONNECTED     17879    
+unix  3      [ ]         STREAM     CONNECTED     19639    /var/lib/amazon/ssm/ipc/termination
+unix  3      [ ]         STREAM     CONNECTED     15911    
+unix  2      [ ]         DGRAM                    17930    
+unix  3      [ ]         STREAM     CONNECTED     17837    
+unix  3      [ ]         STREAM     CONNECTED     17812    
+unix  3      [ ]         STREAM     CONNECTED     17826    
+unix  3      [ ]         STREAM     CONNECTED     15798    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    76555    
+unix  2      [ ]         DGRAM                    15802    
+unix  3      [ ]         STREAM     CONNECTED     17819    
+unix  3      [ ]         STREAM     CONNECTED     15816    
+unix  3      [ ]         STREAM     CONNECTED     18637    
+unix  3      [ ]         STREAM     CONNECTED     17822    
+unix  3      [ ]         STREAM     CONNECTED     15797    
+unix  2      [ ]         DGRAM                    78299    
+unix  3      [ ]         STREAM     CONNECTED     16232    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15844    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17885    
+unix  3      [ ]         STREAM     CONNECTED     15843    
+unix  3      [ ]         STREAM     CONNECTED     17877    
+unix  3      [ ]         STREAM     CONNECTED     19640    
+unix  2      [ ]         DGRAM                    16237    
+unix  3      [ ]         STREAM     CONNECTED     19638    
+unix  3      [ ]         STREAM     CONNECTED     15907    
+unix  3      [ ]         STREAM     CONNECTED     17838    
+unix  3      [ ]         STREAM     CONNECTED     17825    
+unix  3      [ ]         STREAM     CONNECTED     17823    
+unix  3      [ ]         STREAM     CONNECTED     15842    
+unix  3      [ ]         STREAM     CONNECTED     18461    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17811    
+unix  2      [ ]         DGRAM                    15847    
+unix  3      [ ]         STREAM     CONNECTED     16231    
+unix  2      [ ]         DGRAM                    12932    
+unix  3      [ ]         STREAM     CONNECTED     76460    
+unix  3      [ ]         STREAM     CONNECTED     15906    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17886    
+unix  3      [ ]         STREAM     CONNECTED     76461    
+unix  3      [ ]         STREAM     CONNECTED     15912    
+unix  3      [ ]         STREAM     CONNECTED     17832    
+unix  3      [ ]         STREAM     CONNECTED     17818    
+unix  3      [ ]         STREAM     CONNECTED     18638    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17831    
+unix  2      [ ]         DGRAM                    76593    
+unix  2      [ ]         DGRAM                    18965    
+unix  3      [ ]         STREAM     CONNECTED     15845    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18460    
+unix  2      [ ]         DGRAM                    19601    
+unix  3      [ ]         STREAM     CONNECTED     17815    
+unix  3      [ ]         STREAM     CONNECTED     17880    
+unix  2      [ ]         DGRAM                    15858    
+unix  3      [ ]         STREAM     CONNECTED     17883    
+unix  3      [ ]         STREAM     CONNECTED     18960    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15908    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15905    
+unix  3      [ ]         STREAM     CONNECTED     17867    
+unix  3      [ ]         STREAM     CONNECTED     17114    
+unix  3      [ ]         STREAM     CONNECTED     17859    
+unix  3      [ ]         STREAM     CONNECTED     15646    
+unix  3      [ ]         STREAM     CONNECTED     17861    
+unix  3      [ ]         STREAM     CONNECTED     17864    
+unix  3      [ ]         STREAM     CONNECTED     17115    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17840    
+unix  3      [ ]         STREAM     CONNECTED     15695    
+unix  3      [ ]         STREAM     CONNECTED     15301    
+unix  3      [ ]         STREAM     CONNECTED     17856    
+unix  2      [ ]         DGRAM                    13175    
+unix  2      [ ]         DGRAM                    16711    
+unix  3      [ ]         STREAM     CONNECTED     17808    
+unix  3      [ ]         STREAM     CONNECTED     17844    
+unix  3      [ ]         STREAM     CONNECTED     17809    
+unix  3      [ ]         STREAM     CONNECTED     17870    
+unix  3      [ ]         STREAM     CONNECTED     17862    
+unix  3      [ ]         STREAM     CONNECTED     17873    
+unix  3      [ ]         STREAM     CONNECTED     15696    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    13852    
+unix  3      [ ]         STREAM     CONNECTED     17850    
+unix  3      [ ]         STREAM     CONNECTED     13244    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17849    
+unix  2      [ ]         DGRAM                    13815    
+unix  3      [ ]         STREAM     CONNECTED     17847    
+unix  3      [ ]         STREAM     CONNECTED     13812    
+unix  3      [ ]         STREAM     CONNECTED     17855    
+unix  3      [ ]         STREAM     CONNECTED     15647    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15302    
+unix  3      [ ]         STREAM     CONNECTED     13243    
+unix  3      [ ]         STREAM     CONNECTED     17871    
+unix  3      [ ]         STREAM     CONNECTED     17841    
+unix  2      [ ]         DGRAM                    17775    
+unix  3      [ ]         STREAM     CONNECTED     17858    
+unix  3      [ ]         STREAM     CONNECTED     13934    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17843    
+unix  3      [ ]         STREAM     CONNECTED     15748    
+unix  3      [ ]         DGRAM                    13851    
+unix  3      [ ]         STREAM     CONNECTED     17846    
+unix  2      [ ]         DGRAM                    15292    
+unix  3      [ ]         STREAM     CONNECTED     17865    
+unix  2      [ ]         DGRAM                    16906    
+unix  3      [ ]         STREAM     CONNECTED     17868    
+unix  3      [ ]         STREAM     CONNECTED     17874    
+[root@ip-172-31-45-177 ~]# 
+
+6:ss :	It is a replacement of netstat.
+
+syntax :ss 
+example[root@ip-172-31-45-177 ~]# ss
+Netid      State       Recv-Q       Send-Q                                   Local Address:Port              Peer Address:Port       Process      
+u_str      ESTAB       0            0                       /var/lib/amazon/ssm/ipc/health 19642                        * 19640                   
+u_str      ESTAB       0            0                                                    * 17829                        * 17828                   
+u_str      ESTAB       0            0                                                    * 17882                        * 17883                   
+u_str      ESTAB       0            0                                                    * 18959                        * 18960                   
+u_str      ESTAB       0            0                                                    * 17828                        * 17829                   
+u_str      ESTAB       0            0                                                    * 17876                        * 17877                   
+u_str      ESTAB       0            0                                                    * 17816                        * 17815                   
+u_str      ESTAB       0            0                                                    * 17879                        * 17880                   
+u_str      ESTAB       0            0                  /var/lib/amazon/ssm/ipc/termination 19639                        * 19638                   
+u_str      ESTAB       0            0                                                    * 15911                        * 15912                   
+u_str      ESTAB       0            0                                                    * 17837                        * 17838                   
+u_str      ESTAB       0            0                                                    * 17812                        * 17811                   
+u_str      ESTAB       0            0                                                    * 17826                        * 17825                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 15798                        * 15797                   
+u_str      ESTAB       0            0                                                    * 17819                        * 17818                   
+u_str      ESTAB       0            0                                                    * 15816                        * 15845                   
+u_str      ESTAB       0            0                                                    * 18637                        * 18638                   
+u_str      ESTAB       0            0                                                    * 17822                        * 17823                   
+u_str      ESTAB       0            0                                                    * 15797                        * 15798                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 16232                        * 16231                   
+u_str      ESTAB       0            0                          /run/dbus/system_bus_socket 15844                        * 15748                   
+u_str      ESTAB       0            0                                                    * 17885                        * 17886                   
+u_str      ESTAB       0            0                                                    * 15843                        * 15842                   
+u_str      ESTAB       0            0                                                    * 17877                        * 17876                   
+u_str      ESTAB       0            0                                                    * 19640                        * 19642                   
+u_str      ESTAB       0            0                                                    * 19638                        * 19639                   
+u_str      ESTAB       0            0                                                    * 15907                        * 15908                   
+u_str      ESTAB       0            0                                                    * 17838                        * 17837                   
+u_str      ESTAB       0            0                                                    * 17825                        * 17826                   
+u_str      ESTAB       0            0                                                    * 17823                        * 17822                   
+u_str      ESTAB       0            0                                                    * 15842                        * 15843                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 18461                        * 18460                   
+u_str      ESTAB       0            0                                                    * 17811                        * 17812                   
+u_str      ESTAB       0            0                                                    * 16231                        * 16232                   
+u_str      ESTAB       0            0                                                    * 76460                        * 76461                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 15906                        * 15905                   
+u_str      ESTAB       0            0                                                    * 17886                        * 17885                   
+u_str      ESTAB       0            0                                                    * 76461                        * 76460                   
+u_str      ESTAB       0            0                                                    * 15912                        * 15911                   
+u_str      ESTAB       0            0                                                    * 17832                        * 17831                   
+u_str      ESTAB       0            0                                                    * 17818                        * 17819                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 18638                        * 18637                   
+u_str      ESTAB       0            0                                                    * 17831                        * 17832                   
+u_str      ESTAB       0            0                          /run/dbus/system_bus_socket 15845                        * 15816                   
+u_str      ESTAB       0            0                                                    * 18460                        * 18461                   
+u_str      ESTAB       0            0                                                    * 17815                        * 17816                   
+u_str      ESTAB       0            0                                                    * 17880                        * 17879                   
+u_str      ESTAB       0            0                                                    * 17883                        * 17882                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 18960                        * 18959                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 15908                        * 15907                   
+u_str      ESTAB       0            0                                                    * 15905                        * 15906                   
+u_str      ESTAB       0            0                                                    * 17867                        * 17868                   
+u_str      ESTAB       0            0                                                    * 17114                        * 17115                   
+u_str      ESTAB       0            0                                                    * 17859                        * 17858                   
+u_str      ESTAB       0            0                                                    * 15646                        * 15647                   
+u_str      ESTAB       0            0                                                    * 17861                        * 17862                   
+u_str      ESTAB       0            0                                                    * 17864                        * 17865                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 17115                        * 17114                   
+u_str      ESTAB       0            0                                                    * 17840                        * 17841                   
+u_str      ESTAB       0            0                                                    * 15695                        * 15696                   
+u_str      ESTAB       0            0                                                    * 15301                        * 15302                   
+u_str      ESTAB       0            0                                                    * 17856                        * 17855                   
+u_str      ESTAB       0            0                                                    * 17808                        * 17809                   
+u_str      ESTAB       0            0                                                    * 17844                        * 17843                   
+u_str      ESTAB       0            0                                                    * 17809                        * 17808                   
+u_str      ESTAB       0            0                                                    * 17870                        * 17871                   
+u_str      ESTAB       0            0                                                    * 17862                        * 17861                   
+u_str      ESTAB       0            0                                                    * 17873                        * 17874                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 15696                        * 15695                   
+u_str      ESTAB       0            0                                                    * 17850                        * 17849                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 13244                        * 13243                   
+u_str      ESTAB       0            0                                                    * 17849                        * 17850                   
+u_str      ESTAB       0            0                                                    * 17847                        * 17846                   
+u_str      ESTAB       0            0                                                    * 13812                        * 13934                   
+u_str      ESTAB       0            0                                                    * 17855                        * 17856                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 15647                        * 15646                   
+u_str      ESTAB       0            0                                                    * 15302                        * 15301                   
+u_str      ESTAB       0            0                                                    * 13243                        * 13244                   
+u_str      ESTAB       0            0                                                    * 17871                        * 17870                   
+u_str      ESTAB       0            0                                                    * 17841                        * 17840                   
+u_str      ESTAB       0            0                                                    * 17858                        * 17859                   
+u_str      ESTAB       0            0                          /run/systemd/journal/stdout 13934                        * 13812                   
+u_str      ESTAB       0            0                                                    * 17843                        * 17844                   
+u_str      ESTAB       0            0                                                    * 15748                        * 15844                   
+u_str      ESTAB       0            0                                                    * 17846                        * 17847                   
+u_str      ESTAB       0            0                                                    * 17865                        * 17864                   
+u_str      ESTAB       0            0                                                    * 17868                        * 17867                   
+u_str      ESTAB       0            0                                                    * 17874                        * 17873                   
+tcp        ESTAB       0            36                                       172.31.45.177:ssh               13.233.177.3:59248                   
+[root@ip-172-31-45-177 ~]# ^C
+
+7.nslookup-Find DNS related query.
+
+syntax:nslookup <domain name>
+
+example:[root@ip-172-31-45-177 ~]# host facebook.com
+facebook.com has address 157.240.198.35
+facebook.com has IPv6 address 2a03:2880:f144:181:face:b00c:0:25de
+facebook.com mail is handled by 10 smtpin.vvv.facebook.com.
+[root@ip-172-31-45-177 ~]# host google.com
+google.com has address 142.250.182.238
+google.com has IPv6 address 2404:6800:4009:82f::200e
+google.com mail is handled by 10 smtp.google.com.
+[root@ip-172-31-45-177 ~]# nslookup google.com
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 142.251.42.14
+Name:   google.com
+Address: 2404:6800:4009:82f::200e
+
+[root@ip-172-31-45-177 ~]# 
+
+8.Dig:Query DNS related information.
+
+syntax:dig
+example:[root@ip-172-31-45-177 ~]# dig
+
+; <<>> DiG 9.11.4-P2-RedHat-9.11.4-26.P2.amzn2.5.2 <<>>
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 40332
+;; flags: qr rd ra; QUERY: 1, ANSWER: 13, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;.                              IN      NS
+
+;; ANSWER SECTION:
+.                       11      IN      NS      g.root-servers.net.
+.                       11      IN      NS      h.root-servers.net.
+.                       11      IN      NS      i.root-servers.net.
+.                       11      IN      NS      j.root-servers.net.
+.                       11      IN      NS      k.root-servers.net.
+.                       11      IN      NS      l.root-servers.net.
+.                       11      IN      NS      m.root-servers.net.
+.                       11      IN      NS      a.root-servers.net.
+.                       11      IN      NS      b.root-servers.net.
+.                       11      IN      NS      c.root-servers.net.
+.                       11      IN      NS      d.root-servers.net.
+.                       11      IN      NS      e.root-servers.net.
+.                       11      IN      NS      f.root-servers.net.
+
+;; Query time: 1 msec
+;; SERVER: 172.31.0.2#53(172.31.0.2)
+;; WHEN: Thu Nov 03 15:07:21 UTC 2022
+;; MSG SIZE  rcvd: 239
+
+[root@ip-172-31-45-177 ~]# 
+
+9.host:Performs DNS lookups.
+
+syntax host <domain name>
+example:[root@ip-172-31-45-177 ~]# host facebook.com
+facebook.com has address 157.240.198.35
+facebook.com has IPv6 address 2a03:2880:f144:181:face:b00c:0:25de
+facebook.com mail is handled by 10 smtpin.vvv.facebook.com.
+
+=================================================================
+Input Operations and Output operations:
+---------------------------------------
+
+Standard Input:
+--------------
+syntax:cat <filename
+
+example:[root@ip-172-31-45-177 ~]# cat <anitha
+hello world
+
+Standard output:
+----------------
+syntax :echo content >filename
+
+example:[root@ip-172-31-45-177 ~]# echo welcome to the world >anitha
+[root@ip-172-31-45-177 ~]# cat <anitha
+welcome to the world
+[root@ip-172-31-45-177 ~]# 
+
+
+-------------------------------
+Disk utility
+
+1.fdisk
+syntax:fdisk -l:
+---------------
+example:[root@ip-172-31-45-177 ~]# fdisk -l
+Disk /dev/xvda: 8 GiB, 8589934592 bytes, 16777216 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 2330CCC2-270B-42AA-8CB6-AB640F80B1B4
+
+Device       Start      End  Sectors Size Type
+/dev/xvda1    4096 16777182 16773087   8G Linux filesystem
+/dev/xvda128  2048     4095     2048   1M BIOS boot
+
+Partition table entries are not in disk order.
+[root@ip-172-31-45-177 ~]# 
+
+2.df
+syntax:df
+ex:
+[root@ip-172-31-45-177 ~]# df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+devtmpfs          485312       0    485312   0% /dev
+tmpfs             494456       0    494456   0% /dev/shm
+tmpfs             494456     412    494044   1% /run
+tmpfs             494456       0    494456   0% /sys/fs/cgroup
+/dev/xvda1       8376300 1779604   6596696  22% /
+tmpfs              98892       0     98892   0% /run/user/1000
+[root@ip-172-31-45-177 ~]# 
+
+3.df -hT
+syntax:f -hT
+[root@ip-172-31-45-177 ~]# df -hT
+Filesystem     Type      Size  Used Avail Use% Mounted on
+devtmpfs       devtmpfs  474M     0  474M   0% /dev
+tmpfs          tmpfs     483M     0  483M   0% /dev/shm
+tmpfs          tmpfs     483M  412K  483M   1% /run
+tmpfs          tmpfs     483M     0  483M   0% /sys/fs/cgroup
+/dev/xvda1     xfs       8.0G  1.7G  6.3G  22% /
+tmpfs          tmpfs      97M     0   97M   0% /run/user/1000
+[root@ip-172-31-45-177 ~]# 
+
+4.parted
+
+syntax -parted -l
+
+example:[root@ip-172-31-45-177 ~]# parted -l
+Model: Xen Virtual Block Device (xvd)
+Disk /dev/xvda: 8590MB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start   End     Size    File system  Name                 Flags
+128     1049kB  2097kB  1049kB               BIOS Boot Partition  bios_grub
+ 1      2097kB  8590MB  8588MB  xfs          Linux
+
+
+[root@ip-172-31-45-177 ~]# 
+
+5.Yum
+
+syntax :yum install <servicename>
+
+ex:yum install httpd
+
+6.wget
+
+syntax:wget<url>
+
+================================================
+Filter commands:
+-------------------
+1.Head:It is used to print the starting lines (by default it will print 10 lines)
+syntax:head -v  <filename>
+[root@ip-172-31-45-177 ~]# head -v  xyz
+==> xyz <==
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+[root@ip-172-31-45-177 ~]# 
+
+2.Tail command:By default it prints last 10 lines
+syntax:tail -v <filename>
+[root@ip-172-31-45-177 ~]# tail -v  xyz
+==> xyz <==
+11
+22
+33
+44
+55
+6
+66777
+888
+9990
+
+3.Pipe line operation:By using this we can add 2 to 3 commands
+syntax:cat <filename>| head
+
+[root@ip-172-31-45-177 ~]# cat xyz | head
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+[root@ip-172-31-45-177 ~]# 
+
+4.sort:
+syntax:sort <filename>
+
+[root@ip-172-31-45-177 ~]# sort xyz
+0
+1
+11
+2
+22
+3
+33
+4
+44
+5
+55
+6
+6
+66777
+7
+8
+888
+9
+9990
+
+5.uniq :it will print the unique data, to detect the duplicate data and we can delete the data.
+
+
+6.group regular expression
+syntax grep <word> <filename>
+[root@ip-172-31-45-177 ~]# touch sdf
+[root@ip-172-31-45-177 ~]# grep hello sdf
+[root@ip-172-31-45-177 ~]# ls | grep sdf
+sdf
+[root@ip-172-31-45-177 ~]# 
+
+7.sed (stream editor):
+
+sed 's/old content/new file/g'  <filename>
+example:sed 's/xyz/anitha1/g' xyz
+
+awk command:GNU - awk command is used to scan each and every letter in a line.
+syntax: awk '/option/{print}' <filename>
+
+example:awk '/h/{print}' xyz
+
+File compression:
+====================
+1.Tar (tape archive):
+
+syntax:file1,file2,file3----file.tar
+
+example:[root@ip-172-31-45-177 ~]# touch a b c d e f
+[root@ip-172-31-45-177 ~]# tar cvf skillary.tar a b c d e f
+a
+b
+c
+d
+e
+f
+[root@ip-172-31-45-177 ~]# 
+
+2.zip:
+syntax:zip <filename> files
+[root@ip-172-31-45-177 ~]# zip skillary.zip a b c d e f
+  adding: a (stored 0%)
+  adding: b (stored 0%)
+  adding: c (stored 0%)
+  adding: d (stored 0%)
+  adding: e (stored 0%)
+  adding: f (stored 0%)
+[root@ip-172-31-45-177 ~]# 
+[root@ip-172-31-45-177 ~]# ls
+a  anitha  b  c  d  e  error  f  sdf  shellscripting  skillary.tar  skillary.zip  wddm9  xyz
+
+3.gzip:
+[root@ip-172-31-45-177 ~]# ls
+a.gz  anitha  b.gz  c.gz  d  e  error  f  sdf  shellscripting  skillary.tar  skillary.zip  wddm9  xyz
+[root@ip-172-31-45-177 ~]# 
