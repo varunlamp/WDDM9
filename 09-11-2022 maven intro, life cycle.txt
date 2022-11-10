@@ -1,0 +1,148 @@
+Maven :-
+----------------
+
+1.Build Management :
+-----------------------------
+
+Compillation is nothing but converting high level lang to low level lang
+
+Build management (maven)
+
+For example when we building an application we required junit for testing 
+
+we will install the junit and we will add the junit in the project folder
+
+packageing tools we will install and we will add that in project folder 
+
+if we want to update the application we need suppartely update the applications 
+
+in Build tools we will be having one file .xml in this just we will the depednecy and plugin
+
+automatically our build tools will install that application (junit) 
+
+POM.XML :- project object module.Extensible markup langauage
+
+
+Dependency :- it is like a supporting 
+
+Plugin :- It is used to do the specific task 
+maven Installtion:
+---------------------------
+step 1 :- launch the t2.micro instance
+
+step 2 :- connect to the terminal
+
+step 3 :- open the browser and enter MAVEN
+
+step 4 :- choose the maven.org 
+
+step 5 :- click on download
+
+step 6 :- copy the binary.tar.gz link
+
+wget <link>
+
+step 7 :- Extract the file by using
+ 
+     tar xvf <file-name>
+
+step 8 :- rename the apache-maven by maven
+
+     mv apache-maven maven 
+
+step 9 :- yum install java-11* -y
+
+
+maven is written in java lang so for this reason it require some of the java library
+
+step 10 :- to check the version 
+
+java -version
+
+step 11 :- cd  maven 
+
+           cd bin
+
+step 12 :- pwd
+ 
+copy the path
+
+step 13 :- nano ~/.bashrc
+
+below the if condition
+
+export PATH=<path of maven>:$PATH
+
+step 14 :- To reflect the changes
+
+source ~/.bashrc
+
+
+Working with maven :
+----------------------------
+
+Life cycle goals
+
+1.mvn validate 
+2.mvn clean
+3.mvn compile
+4.mvn test
+5.mvn pakcage
+6.mvn site
+7.mvn install
+
+step 1 :- TO generate the archetype
+
+ mvn archetype:generate
+
+step 2 :- choose the template id (1987)
+
+step 3 :- choose the vesrion(8)
+
+step 4 :- Add the group id
+
+group id :- here we need to provide the company name or team name 
+
+step 5 :- Add the artifact id 
+
+artifactid :- we need to the project name
+
+step 6 :- enter into the project
+
+step 7 :- mvn compile :- to compile the source code
+ 
+when we execute mvn compile it will generate the target folder along with inside the target
+it will generate the source files
+
+step 8 :- To DO the unit test we need to execute mvn test when we execute it will generat
+           test reports   
+mvn test
+
+step 9 :- mvn package is used to package the source code 
+
+mvn package 
+
+step 10 :- mvn site (for site generation)
+
+step 11 :- mvn install (to install project to our system)
+
+/root/.m2/repository
+
+
+Mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4
+
+
+1.mvn validate
+2.mvn clean
+3.mvn package
+4.mvn install
+
+.m2 is the maven local repositroy
+
+
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+Agenda :
+-------------
+1.cronjob
+2.Git intro
+3.types of version control system
+4.repository
+5.some basic commands 
+
+
+1.Cron job :
+----------------
+For example we will be having alarm 
+
+Scenario:
+--------------------------
+when we are working developer will tell build will be deploying at morning 5AM 
+but at that time tester will be not avilable
+
+they will set the cron for testing at morning 5AM it will automatically run the tests
+
+at the specified time cron is going execute that task 
+
+Sheduling the jobs 
+
+How to shedule the jobs:-
+-----------------------------------
+step 1 :- we need write a shell script for sheduling the jobs
+
+nano cron.sh 
+
+
+#!/bin/bash
+
+date >> /home/ec2-user/shellscripting/wddm9.txt
+
+step 2 :- we need to shedule the job 
+
+
+crontab -e is nothing but crontab is the operation which we are performing 
+
+what are the task we are going to execute that things we need specify
+
+crontab -e    
+
+
+* * * * * /home/ec2-user/shellscripting/cron.sh
+
+* * * * *  :- each and every miniute 
+
+i am executing the cron.sh file for each and every min when ever the cron.sh file will get execute at that time
+the output of the file needs to store inside the wddm9.txt file 
+===========================================================================
+
+GIT :-
+------------------------
+Git is a distributed version control system
+
+what is version control system???...
+
+A version control system is a system that maintains different versions of our project . when we work in 
+team or an individual as the project progresses new features will get added ..
+
+so version control system maintains the different versions of system..
+
+example :--------------
+
+whatsapp :chats--v1
+          chats,calls--v2
+          chats,status,calls---v3
+          chats,status,calls,payment---v4-------------this new feature is not working at that time 
+                                          we can roll back to older version  by using version control system
+
+in version control system we will be having 3 types :
+---------------------------------------------------------
+1.local version control system
+2.centralised version control system
+3.Distributed version control system:
+
+
+1.local version control system:
+--------------------------------------
+we will be writing the source code in our local system if any thing happes to that system
+we lost all the work what and all we did ..............
+
+drawback :- if anything happens to the system the data will be completely lost...
+
+to overcome the drawback of local version control system we will be having centralized version control system
+
+2.centralized version control system:
+----------------------------------------
+drawback :
+
+in anything happens to the central server the data will be lost
+
+and for working we required good internet .....
+
+to overcome the drawback of this we will having distributed version control system
+
+3.Distributed version control system:
+-------------------------------------------
+
+==================================================================================
+git bash is just terminal 
+
+we can execute our git commands anywhere but only one requiremnt the system needs to get installed with git 
+
+working the git we will be 2 options 
+
+1.we can create the repositroy in our local system then we can coonect it with remote
+
+2.we can create repo in remote then we can clone it local system
+
+GITHUB :
+----------------------
+Github is basically is a for profit company owned by micrsoft, which hosts git repositroy online.....
+
+
+1.working directory 
+
+touch <file >
+
+
+2.staging area (it is an area where we first need to put our project before commiting, this is used for code 
+review by other team members )
+
+git add <file>
+
+3.local repo
+
+
+4.remote repo 
+=============================================================================================
+1.git clone :- it is used to copy the remote repositroy to our local system
+
+already repository is present and working is going on in middle of the project we are joined to the comapny
+at that time we will be doing this job.................
+
+cd <repo-name>
+
+touch <file>
+
+2.git status :- it is used to check the status of the branch, to check whether the files are in tracking or 
+                 untracking mode...
+
+
+we are working in the repo 
+
+3.git add <file> it is used to add the files to stagging area.
+
+
+4.git commit -m "msg" :- By using this we will storing the chnages as well as we are creating the versions of the 
+                         file...(creating the snapshot)
+                        
+
+5.git config --global user.name "user-name"
+
+6.git config --global user.email "mail-id"
+
+7.git log :- it is used to check the commit history
+
+8.git push origin <brnach-name> :- it is used to add the local changes to remote..
+
+9.git fetch origin <branch-name> :- it is used to check the recent changes in remote which is done by other 
+                                        developers
+
+when we fetch the data will be present inside the .git repo
+
+the data will be present inside the .git repo
+
+cd .git
+
+cd FETCH_HEAD
+
+
+10.git pull origin <branch-name> :- it is used to download the remote changes to local system...
+
+
+
+
+
+
+
+
+
+
+
+ 

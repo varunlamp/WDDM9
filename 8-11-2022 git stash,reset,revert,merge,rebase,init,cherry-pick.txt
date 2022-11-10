@@ -1,0 +1,272 @@
+Agenda :
+---------------
+1.git init
+2.git reset
+3.git revert
+4.git tags
+5.git merge
+6.git rebase
+7.git cherry-pick
+8.git squash
+
+
+we have copied one github repo to local by using git clone 
+
+sceanrio :
+-----------------
+In my local system already i have written source code i want to push it to remote repo 
+
+git init by using this command we can create local repo or else we can convert our working directory as
+a git repository
+
+1.git init 
+or 
+git init <repo-name> 
+
+step 1 :- create one directory
+
+step 2 :- enter into the directory <cd dir-name>
+
+step 3 :- create some files 
+
+touch f1 f2 f3 f4
+
+step 4 :- ls -a check whether .git dir is present or not
+
+step 5 :- git init 
+
+step 6 :- check whether .git repo is created or not
+
+-------------------------------------------------------------------
+2.we need to add the files to staging area then local repo after this remote repo 
+
+git add . :- to add all the files to staging area
+
+git status :- to check the status of the branch
+
+git commit -m "msg" :- To add the files to local repo(.git)
+
+3.I want to push the local change to remote before we push we need to connect local repo with remote
+
+git remote add origin <url>
+
+4.git remote -v :- to check about the connection
+--------------------------------------------------------------------------
+==============================================================================================
+5.Git reset :- This will bring back files from staging area 
+
+sceanrio :- 
+
+while creating the files i have created some extra files for practise purpose and by mistakely i have 
+added that files to stagging area 
+
+a1,b1,c1,d1,
+
+git reset 
+
+step 1 :- create some files
+
+touch a1 b1 c1 d1
+
+
+for deleting the commits 
+
+git reset :- by using this command we can delete the number of commits 
+
+it will remove the files from commits as well as from staging area
+
+git reset head~1:- Working directory
+
+git reset head~2
+
+git reset --soft head~1 :- to get back the files from local repo to stagging area
+
+-------------------------------------------------------------------
+But i dont want to remove the files from staging area 
+(just i want to remove the files from commits)
+
+
+git reset --soft head~1
+
+git reset --hard head~1 :- to delete the files permanentely :- IT IS A destructive command 
+-------------------------------------------------------------------------
+
+ I want to remove the files permanentely 
+
+git reset --hard head~1
+======================================================
+
+Restore the deleted commits 
+*) How to get back the deleted files 
+---------------------------------------
+git reflog :- is the command which is used to check the history of commits (in this we will get deleted
+ commits history)
+
+git reset --hard <deleted commit-id>
+
+
+=========================================================================================
+
+Drawback :
+---------------
+It only works with top n commits we cannot specifically work on the particular commit 
+
+to overcome the drawback of the git reset we will be having git revert 
+
+
+6.git revert :
+-------------------
+It is used to remove the commits from the remote repo as well as local repo .
+since now our changes are in working directory lets add those changes to the staging area & commit them
+
+now create 4 commits 
+
+we have deleted the commit and deleted the file 
+but when we delete it will create one more new commit with revert
+
+=================================================================================================
+Branches :-
+--------------------
+Branches are nothing but supparte folder where we can work privetly and branch is 
+completely dedicated to the respective developers 
+
+for example we developing one application in that we will be having some features
+
+singup
+login
+cart
+search
+favourite
+buynow 
+
+7. git branch <branch-name>  :- it will create the branch
+
+git checkout -b <branch-name>:- it will create and change the branch..
+
+8.git branch :- it is used to check the branch list
+
+9.git checkout <branch-name> :- it is used to change the branch 
+
+
+10.git merge <branch-name> :- which is used to merge the branches (we will adding commits 
+                          from one branch to another)
+
+
+2 way merging or fast-forward merge 
+
+
+
+
+master :- singup file (but while you want upload at that time chances are there we will face
+          conflict)
+
+singup files is pupdating by 2 developers at that time git will get confuss at that time
+we will get the conflict \
+
+when we get the conflict we need to solve then we need push the local changes to remote
+======================================================================================
+
+11.git tag :- it is used to tag 
+
+Tagging the importent checkpoints in the course of projects 
+
+singup :- in singup in 10th commit singup feature is ready 
+
+1000 commits 
+
+2 options (types)
+----------------------
+1.light weight tags
+
+This tags contain only the commit checksums 
+
+syntax :- git tag <tag-name> <commit-id>
+
+2.annotated :-
+
+
+for this tags we can add the message by adding the message we can get the inforamtion
+
+syntax :- git tag -a <tag-name> <commit-id> -m "msg"
+
+-----------------------------------------------------------------------------------
+12.git rebase :- it is alternative for git merge 
+
+by executing this command we can get the commit history in linear formate 
+
+for supparting the commits based on branches 
+
+1001--master
+
+1002--feature
+
+1003-- master 
+
+git merge :- 
+
+1001--master
+
+1002--feature
+
+1003-- master 
+
+git rebase :- 
+
+master :-1001,1003
+
+feature :- 1002
+
+
+just it will pick the commits from one branch and it will add 
+
+synatx :- git rebase <branch-name>
+
+13. git cherry-pick :
+-------------------------
+sceanrio :- while working 
+
+dev1 is working in the singup branch by mistakly he has added commit to login
+
+we will using cherry-pick 
+
+syntax :- git cherry-pick <commit-id>
+
+14.git stash :
+--------------------
+stash the data 
+to store the data for temp purpose 
+
+sceario :- dev1 :-singup
+           dev2 :- login --still he is not complted the work  
+           team lead :- testing 
+
+while testing he got on blocker defect in the singup branch
+
+stash the data when he stash the stashed data will be present inside the temp memroy space
+
+stash inforamtion is present inside the 
+
+.git/refs
+
+nano stash
+
+git stash list :- to get the list of stash
+
+
+To options to apply the temp data which we stashed:
+----------------------------------------------------------
+1.git stash apply :- apply the recent stashed changes but stashed data is present in the 
+stash list 
+
+2.git stash pop :- git stash pop at that time it will apply the changes and remove stash
+                   history(remove it from stash list)
+
+
+
+
+
+
+
+
+
+
