@@ -1,0 +1,71 @@
+Syntax with example for each and every commands 
+
+1.File management
+	a) ./bin :- Consist of binary files , executable files 
+		command :-  cp file1 file2 
+		Example:-	cp f1 f2
+		Command :- Touch filename
+		Example :- Touch z1 
+		
+	b) ./etc :- system config file will be available 
+
+	c) ./home :- user will be saved in home directory 
+
+	d) ./tmp :- temp file will be stored 
+	
+	e) ./usr :- users will be stored in this path 
+
+2.File permissions
+	3 type of persmission will be there for file :-
+
+	Owner persmission :-  
+
+	Group permission :-
+	
+	Other permission :-
+ 
+	File access modes :- Read , write and Execute 
+
+	 To change permission chmod will be use .
+	Syntax :- chmod owner group other <filename >
+	Example :- chmod 7 7 7 <f1>	
+
+	Access mode can be denoted by letters as well 
+
+	Example :- chmod u=rw,g+w,o+r <filename>
+
+3.Networking commnads
+
+	Ping :- to check internet connection 
+	ifconfig :- to check the ip address and network connection 
+	route :- allows you to make manual entries into the network routing tables.
+	netstat :- troubleshooting and configuration, that can also serve as a monitoring tool for connections over the network
+	nslookup :- identifyb queries internet domain name servers 
+
+4.filter commands 
+
+	a)head :- use to print starting line  (Exa :- head - n - provide number of line )
+	b)tail :- use to print ending line 
+	c)pipeline operator (|) :- Used to combine 2 or 3 command one single command 
+	d)sort :- sorted the data in order 
+	e)uniq :- to delete duplicate data 
+	f)grep :- group regular expression 
+	
+5.file compression 
+	    1)Tar :- used to combine 2 or more file in .tar single file 
+		Synatx :- tar cvf files.tar <files>
+		Example:- tar cvf files.tar file1, file2, file3
+
+		C-create V-Verbose F-File
+	    2)zip :- to compress file zip is used 
+		syntax :- zip <zip file> files  
+		Example :- zip files.zip a b c d 
+	    3)gzip :- for individual files gzip is used 
+		 exa:- gzip -d a b c 
+
+6.disk utility
+		a)fdisk :- for fixed disk space 
+		b)df :- displays the amount of disk space available on the filesystem
+		c)yum  :- to install in linux yum install is used 
+		d)apt :- to install in ubuntu apt is used
+ 		e)wget :- we ca install the application 
