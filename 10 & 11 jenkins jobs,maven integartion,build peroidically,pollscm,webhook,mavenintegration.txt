@@ -1,0 +1,122 @@
+Jenkins :
+------------------
+Jenkins is a CI tool
+
+Continuos Integration :
+-----------------------
+
+CICD -Continuos Integration continous deliver/deployment
+
+CICD -Continuos Integration continous deployment
+
+
+Jenkins Installation :
+--------------------------------
+step 1 :- Copy the repo
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+step 2 :- Add the key to access the repositroy
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+step 3 :- To install the extra packages 
+
+sudo amazon-linux-extras install epel
+
+Step 4 :- Install the java 
+
+yum install java-11* -y
+
+step 5 :- Install the jenkins 
+
+yum install jenkins -y
+
+
+step 6 :- To start the jenkins server
+
+systemctl start jenkins 
+
+step 7 :- IP:8080
+
+step 8 :- install git 
+
+-----------------------------------------------------------
+
+
+Build periodicaly:
+------------------------
+it is similar to cronjob 
+
+for example our developers will tell we are going give the build at morning
+4am as a test engineer we need to test (smoke testing)
+
+To execute the test cases we will set Build peroidically
+
+how to build the job each and every minute 
+
+step 1 :- create the job & choose freestyle 
+
+step 2 :- choose source code management and add git repo url & add the branch
+
+step 3 :- build triggers choose periodically
+
+
+---------------------------------------------------------
+Poll scm :
+----------------
+Cach and every minute it needs to check but if there are any new commits 
+then only it needs to build the job..
+
+step 1 :- create the job & choose freestyle 
+
+step 2 :- choose source code management and add git repo url & add the branch
+
+step 3 :- build triggers choose poll scm
+
+
+Webhook :
+---------------
+I dont want to set the timings 
+when ever the new changes are added to the github then only it needs to 
+trigger the job
+
+step 1 :- create the job & choose freestyle 
+
+step 2 :- choose source code management and add git repo url & add the branch
+
+step 3 :- build triggers choose gitscm polling
+
+step 4 :-
+
+step 5 :
+
+step 6 :- http://65.2.182.97:8080/github-webhook/
+
+Jenkins-maven-git integration :
+------------------------------------
+for integarting with maven we require one plugin 
+
+plugin :- maven integration
+
+set the path in global tool configuartion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
