@@ -1,0 +1,268 @@
+User management :
+--------------------------
+like our AWS account---IAM roles users
+
+jenkins --- users and will attach the roles for the users based on the position/requirement
+
+example :- Dev :- Build (will attach the role he can able create the jobs,modify)
+
+test :- read permission for the respective user
+
+To attach the roles to the user we required role based authorization strategy
+
+Creating the user and attaching the roles :
+-------------------------------------------------------
+1.manage jenkins
+2.manage plugins
+3.Available-role based authorization strategy
+
+4.manage jenkins
+5.users--create users
+6.add the user details& confirm
+
+7.Configure global security
+8.Authorization
+9.Role based strategy
+
+10.manage & assign roles
+11.manage roles
+12.roles (add the permissions)
+13.assign roles 
+
+-----------------------------------------------------------------
+can we change the GUI of the jenkins????
+
+-> yes we can change the GUI by installing the plugin called blue ocen
+
+Install the Blue Ocean plugin
+
+
+Jenkins Backup :
+----------------------
+1.manage jenkins---manage plugins--avaiable ---ThinBackup
+
+2.manage jenkins --- tools and actions ---ThinBackup
+
+3.ThinBackup---settings ---add the path --save 
+(give the persmission  for the dir (chmod 777 <file>))
+
+4.click on backup --check it in the path 
+
+============================Jenkins completed=======================================
+
+AGILE :-
+
+SDLC :- Software development life cycle 
+
+Def:-
+Software development life cycle is a step by step or standard procedure to develop a 
+new software 
+
+when it will get start :
+-------------------------
+when a company / person gets a project then they will start with SDLC.
+
+why we need follow the SDLC??
+------------------------------------
+1.we will not get know how much money needs to invested 
+
+2.how many eng needs to work on the project
+
+3.we will get the supporting documentation for the project
+
+4.if we are not having the certain plan we will not get to know when we need to complte
+
+we will be delaying the release 
+
+DEVOPS --
+
+Stages :
+------------------
+1.Requirment collection
+2.Feasibility study
+3.Design
+4.Developing
+5.Testing
+6.Installation
+7.Maintance 
+
+
+Example :- House construction 
+
+1.House construction company 
+
+1.Requirment collection :- (BA/PA)
+(service based--BA
+ product based --PA)
+BA :- bussiness analsyst --collect the requirment from the customer 
+
+need one hall -- TV,pop,Bathroom
+kitchen :---------
+
+2.Feasibility study:
+-------------------------
+PM(project manager)
+Architect--- lang,design 
+HR
+finance team 
+BA
+
+they will plan ---bugdet 
+
+3.Design :- (HLD&LLD) arch - technical arch, sr arch, arch 
+
+HLD :- high level design (blue print )
+
+LLD :- low level Design ( we will be having deatiled planning of the house)
+
+4.Developing : sr dev, jr dev, fresher 
+-----------------
+according to the LLD they will start  build 
+
+5.testing :- sr test, jr test, fresher 
+-----------------------
+Quality of the building and we will be testing the 
+
+6.Installation : installtion eng, site eng 
+-------------------
+
+
+7.Mainatnce :------- dev & test 
+-----------------------------
+
+Types of SDLC modules :
+--------------------------
+1.waterfall model
+
+stages :
+--------------
+1.Requirment collection
+2.Feasibility study
+3.Design
+4.Developing
+5.Testing
+6.Installation
+7.Maintance 
+
+2.spiral model :-
+---------------
+
+stages :
+
+1.Requirment collection
+2.Feasibility study
+3.Design
+4.Developing
+5.Testing
+6.Installation
+7.Maintance 
+
+
+stage -- features 
+3.V & V model (verification & Validation)--dev & test simul and each and every step is tested 
+
+1.Requirment collection
+2.Feasibility study
+3.Design
+4.Developing
+5.Testing
+6.Installation
+7.Maintance 
+
+4.Prototype model
+
+stages :
+---------------
+1.Requirment collection
+2.Feasibility study
+
+3.Design -- demo design(prototype of the project )
+4.Developing
+5.Testing
+6.Installation
+7.Maintance 
+ 
+5.Hybrid model :-
+----------------------
+
+here we will combine the modules (v&v with prototype)
+spiral with prototype
+
+6.Derived model :-
+
+waterfall model -- v&v module 
+
+7.Agile model:
+------------------------
+Agile is a itterative and incremental approach where customer can change thier reuirement
+anytime 
+
+as a company we have to flexible enough to accept (take up ) the chnages ,
+
+develop and test the changes and we need to delivery the software with short span of time
+
+or planned period of time....
+
+*) Advantage of agile :
+---------------------------------
+1.the main aim of agile is to satisfy the customer by giving quality s/w with in short span of time
+2.Reuirement changes are allowed
+3.Easy model to adopt
+4.there will be good communication between dev, test eng BA & scrum master, customer 
+5.Release are short
+6.Dev & Test eng can communicat with customer & take the feedback from customer 
+
+*) DisAdvantage of agile :
+--------------------------------
+1.Scope of design and documentation is less
+2.Experience resource are required to work
+3.if customer not avare of complete requirment chances are there we might missup the requirment
+
+
+Agile terminology :-
+-------------------------
+1.Release :- Combination of 1 or more sprint 
+2.sprint :- Sprint is a actial time taken by developers and test eng to dev and test the software
+3.Story :- Features/module/functionality
+4.Epic :- Complete / set of requirment
+5.story point :- rough estimation given by the dev and test eng to dev and test the software
+in terms of Day 
+
+Fibonacci series :
+
+0 1 1 2 3 5 8 
+
+6.swag :- rough estimation given by the dev and test to dev and TE the s/w in terms of 
+           hours 
+
+
+Scrum module :-
+--------------
+It is a step by step procedure / standard procedure which helps team work together to dev new
+software.
+
+Meetings :--
+--------------------
+1.sprint planning
+2.scrum meetings
+3.sprint reterospective meeting.
+4.release Reterospective
+5.bug trigen /defect trigen
+6.product backlog /sprint review 
+
+
+Scrum master :-BA/dev/test/
+-----------------------
+scrum master is a person who is responsible for delivery of software to the customer within 
+planned period of time...
+
+
+
+
+
+
+1.what is git? explain about git?
+2.types of vcs ? Explain about distributed vcs
+3.difference between git fetch and git pull
+4.diff between git pull and git clone
+5.Explain about Github

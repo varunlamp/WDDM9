@@ -1,0 +1,203 @@
+Meetings :--
+--------------------
+1.sprint planning
+2.scrum meetings
+3.sprint reterospective meeting.
+4.release Reterospective
+5.bug trigen /defect trigen
+6.product backlog /sprint review 
+
+1.sprint planning:-
+------------------------------
+sprint planning is a meeting conducted by the scrum master on the first day of every sprint
+
+-> planning of one sprint 
+
+-> BA,dev-team, test-team, scrum master will be present ..
+
+-> BA will explain the complete requirement to entire team how each & every feature work
+   
+travel agency :- bookings (bus,train,airways,hotels)
+
+based on that scrum master will prirotize the requirement 
+
+1st what needs to be done 
+
+he will devide the sprints(features)
+
+2.scrum meeting/ stand-up:-
+-------------------------------
+Conducted by scrum master on daily basis strictly bounded to 15min(on the company standareds)
+
+-> BA, dev-team , testing-team , scrum master 
+
+1. what we did yeasturday
+2.what we are going to do today
+3.Are they any issues/problem....
+
+3.sprint reterospective meeting :-
+-------------------------------------------
+It is a meeting conducted by scrum master at a last day of every sprint 
+
+BA, dev-team, test-team, scrum master..
+
+1.what went well 
+2.what didn't go well
+3.what are the actions plan
+---------------------------------------------
+
+4.Relase Reterospective meeting :
+-----------------------------------
+It is a meeting conduted by scrum master at the last day release ...
+
+-> BA, dev-team, test-team, scrum master...
+
+1.what went well
+2.what didnt go well
+3.what are the actions plan
+
+zomato :
+---------
+order     ---release is combination of multiple sprints 
+search
+restorent
+foods 
+
+
+5. Bug Trigen meetings :-
+------------------------------
+It is a meeting counduted by scrum master or BA or Test lead 
+
+-> week before release (or) same day before sprint 
+
+-> BA, test-team , dev-team, scrum master 
+
+*) Pending defects :- previous release not fixed by the dev team 
+
+*)open defects :- Defect found in the present sprint/ release..
+
+scrum master/BA :- prioritize the bugs according to the customer bussiness workflow 
+
+what needs to be fix in this release what needs to fix in the next release..
+
+6.product backlog meetings :
+---------------------------------
+
+It is meeting conducted by scrum master a week before release...
+
+-> in this meeting gather list of open & pending story's which are not implemented in the 
+
+current release.. 
+
+
+release :- filter
+
+scrum master will priortize the storys based on the customer bussiness workflow 
+which needs to be implemeted in the current release and which should be in the next release
+
+--------------------------------------------------------------------------------------
+
+Bug Bucket :
+----------------
+It is an epic/story created by scrum master created in project management tools like jira
+
+-> It consist of list of all pending defects not fixed by developers 
+
+chickens and pigs :
+------------------------
+pigs :- Are the scrum team memebers 
+
+_> people who are working on project & complete the task in a given period of time..
+
+chickens :- these are the peoples who gets the bussiness to the company...
+
+burnupup chart & burndown chart :
+
+Burndown chart :
+------------------------
+this chart is used to calculated total amount of work , remaining in the beggining 
+of every sprints  
+
+25hours 
+
+7-hours ---18hours 
+
+Burnup chart :-
+--------------------
+this is the chart is used to calculate total amount of work complted at the
+end of of the every sprint 
+=====================================================================================
+
+                                     JIRA
+                                  -------------
+Jira is a project management tool 
+
+jira is a software testing tool developed by the australian company atalssian
+
+Def :- 
+
+jira is a project management tool used for issues & bugs tracking system, it is widely 
+used as an issues tracking tool for all types of testing ....
+
+what is project :-
+-------------------------
+Project is a noting but number of task coupled / clusterd into a unit or board is know as
+project 
+
+In this project :-
+---------------------
+1.task
+2.Issues
+3.epic
+4.Bug
+
+Jira components :
+------------------
+1.project
+2.add the teammates
+3.Issues
+4.Types of Issues 
+
+Work flow :
+---------------
+1.Epics
+2.Sprints
+3.roadmap
+4.Backlog
+
+
+
+1.open the browser
+2.Enter jira
+3.choose atallsian jira
+4.give a uniq name for your site -- the site is for our project it should be uniq  
+5.chnage template --choose scrum template
+6.choose team-managed 
+
+
+1.roadmaps :-
+-----------------------
+keep your teams and org in sync with roadmapping software built to help us release more 
+predictably and stay on target to achive your goals
+
+Resume points :
+------------------
+1.operating system :- windows, linux,ubuntu
+2.scripting lang :- shell script
+3.version control system :- Git
+4.pipelines and trending toolkit :- jenkins
+5.Build tool :- Maven
+6.knowledge on agile methodology
+7.bug tracking tools :- jira 
+
+
+
+
+Linux,shell scripting, git,maven, jenkins, agile and jira 
+
+from tommarow ansible part by Bharath sir 
+
+
+
+
+
